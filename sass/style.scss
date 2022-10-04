@@ -1,0 +1,71 @@
+/* Variables */
+$base-color: #e2ba63;
+$font-color: #fff9ed;
+$accent-color: #ffaa00;
+
+/* Mixins's */
+@mixin transition {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Styling body and other HTML tags */
+body {
+    background-color: $base-color;
+    text-align: center;
+    font-size: 6vmin;
+}
+
+p {
+    color: $font-color;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    color: $font-color;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 6vmin;
+    text-decoration: none;
+    display: inline-block;
+    width: auto;
+    height: auto;
+}
+
+/* Styling the buttons*/
+
+.button {
+    transition-duration: 0.4s;
+    background-color: $accent-color;
+    border: solid 0.5vmin $accent-color;
+}
+
+.button:hover {
+    background-color: $base-color;
+    border: solid 0.5vmin $accent-color;
+}
+
+.button:active {
+    background-color: $base-color;
+    border: solid 0.5 $base-color;
+    text-decoration: none;
+}
+
+/* This part is setting up the grid */
+
+.grid-container {
+    display: grid;
+    display: inline-grid;
+    gap: 2vmin;
+    align-content: center;
+    grid-template-columns: repeat(11, 5fr);
+    grid-template-rows: repeat(5, 5fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.div1 { grid-area: 2 / 6 / 3 / 6; }
+.div2 { grid-area: 3 / 6 / 4 / 6; }
+.div3 { grid-area: 4 / 5 / 5 / 5; }
+.div4 { grid-area: 4 / 6 / 5 / 6; }
+.div5 { grid-area: 4 / 7 / 5 / 7; }
